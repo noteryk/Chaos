@@ -1,0 +1,29 @@
+{
+  "name": "chaos",
+  "version": "0.0.1",
+  "description": "Chaos project",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michallesss/Chaos.git"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "nodejs",
+    "javascript",
+    "css",
+    "html",
+    "bootstrap",
+    "mongodb"
+  ],
+  "author": "Mikael, Mikołaj Koper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michallesss/Chaos/issues"
+  },
+  "homepage": "https://github.com/Michallesss/Chaos#readme"
+}
