@@ -4,7 +4,8 @@
   "description": "Chaos project",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js",
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
     "typescript",
     "mongodb"
   ],
-  "author": "Mikael, Mikołaj Koper",
+  "author": "Mikael",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Michallesss/Chaos/issues"
