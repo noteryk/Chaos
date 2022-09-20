@@ -28,7 +28,3 @@ app.use('/api', api);
 // Import Web
 const web=require('./web/web');
 app.use('/', web);
-
-app.get('/', (req, res)=>{
-    res.render('index');
-});
