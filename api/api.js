@@ -5,15 +5,16 @@ const jwt=require('jsonwebtoken');
 const { verifytoken }=require('./middleware/verifytoken');
 module.exports=router;
 
+// Connect info
+const { uri, dbname }=require('./connect.json');
+//mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+
 // Connect to DB
+const client=new MongoClient(uri, {});
 const connect = async () => {
-    const uri='mongodb://127.0.0.1:27017';
-    const dbname='Chaos';
-    //mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
-    const client=new MongoClient(uri, {});
+    client.db(dbname);
     try {
         await client.connect();
-        await client.db(dbname).command({ping: 1});
     } catch(e) {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
     } finally {
@@ -22,3 +23,13 @@ const connect = async () => {
     }
 };
 connect();
+
+// Register
+router.post('/register', async (req, res) => {
+    
+});
+
+// Login
+router.post('/login', async (req, res) => {
+
+});
