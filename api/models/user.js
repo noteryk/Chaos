@@ -33,7 +33,7 @@ const register= Joi.object({
         .min(3)
         .max(64)
         .required(),
-    eboutme: Joi
+    aboutme: Joi
         .string()
         .max(1024),
     status: Joi
