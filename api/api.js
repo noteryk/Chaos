@@ -26,7 +26,7 @@ connect();
 
 // Register
 router.post('/register', async (req, res) => {
-    
+    //client.db().collection('').find({}).toArray();
 });
 
 // Login
