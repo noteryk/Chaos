@@ -1,0 +1,29 @@
+Chaos-DB
+
+User:
+-userID
+-Nick (może się powtarzać
+-Login (nie może się powtarzać bo służy do logowania)
+-Password
+-Email (nie może się powtarzać)
+-Aboutme
+-Status
+-ProfilePicture
+-CoverPicture
+-CreateDate
+
+Friendship: (and invites)
+-friendshipID
+-senderID
+-receiverID
+-status (accepted, pending or blocked)
+-muted (true or false)
+
+Message:
+
+Group:
+
+Membership: (group)
+-groupID
+-memberID
+-muted (true or false)
