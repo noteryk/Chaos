@@ -12,8 +12,8 @@ const { uri, dbname }=require('./connect.json');
 // Connect to DB
 const client=new MongoClient(uri, {});
 const connect = async () => {
-    client.db(dbname);
     try {
+        client.db(dbname);
         await client.connect();
     } catch(e) {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
