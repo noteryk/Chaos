@@ -21,6 +21,7 @@ const connect = async () => {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
     }
 };
+connect();
 
 // Close connection to DB
 const close = async () => {
@@ -30,15 +31,6 @@ const close = async () => {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
     }
 };
-// Show DB status
-const status = async () => {
-    try {
-        client.serverStatus();
-    } catch(e) {
-        console.error('\x1b[31m','Database error:','\x1b[0m',e);
-    }
-};
-connect();
 
 // Register
 router.post('/register', async (req, res) => {
