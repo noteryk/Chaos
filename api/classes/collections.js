@@ -1,33 +1,36 @@
-module.exports={
-    User,
-    Friendship,
-    Message,
-    Group,
-    Membership
-};
-
 class User {
     //_id
-    Nick;
-    Login;
-    Password;
-    Email;
-    Aboutme;
-    Status;
-    ProfilePicture;
-    CoverPicture;
-    CreateDate;
+    nick;
+    login;
+    password;
+    email;
+    createDate;
+    
+    constructor(nick=login, login=null, password=null, email=null) {
+        nick;
+        login;
+        password;
+        email;
+        createDate=new Date();
+        return {
+            nick,
+            login,
+            password,
+            email,
+            createDate
+        };
+    }
 
-    constructor(Nick, Login, Password, Email, Aboutme, Status, ProfilePicture, CoverPicture) {
-        Nick;
-        Login;
-        Password;
-        Email;
-        Aboutme;
-        Status;
-        ProfilePicture;
-        CoverPicture;
-        CreateDate=new Date();
+    validate(schema) {
+        const { error, value }=schema.validate({});
+        return {
+            error,
+            value
+        }
+    }
+
+    insert(server, collection) {
+
     }
 };
 
@@ -37,7 +40,7 @@ class Friendship {
     receivweID;
     status;
     muted;
-
+    
     constructor(senderID, receivweID, status) {
         senderID;
         receivweID;
@@ -51,3 +54,11 @@ class Message {};
 class Group {};
 
 class Membership {};
+
+module.exports={
+    User,
+    Friendship,
+    Message,
+    Group,
+    Membership
+};
