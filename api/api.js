@@ -10,10 +10,10 @@ const { uri, dbname }=require('./connect.json');
 //mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 
 // Connect to DB
-const client=new MongoClient(uri, {});
+/*const client=new MongoClient(uri, {});
+client.db(dbname);
 const connect = async () => {
     try {
-        client.db(dbname);
         await client.connect();
     } catch(e) {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
@@ -21,6 +21,15 @@ const connect = async () => {
         console.log('\x1b[32m','Server connected','\x1b[0m',`(on url ${uri})...`);
         await client.close();
     }
+};*/
+const connect = async () => {
+
+};
+const close = async () => {
+
+};
+const status = async () => {
+
 };
 connect();
 
