@@ -31,8 +31,7 @@ const register= Joi.object({
         .string()
         .email()
         .min(3)
-        .max(64)
-        .required(),
+        .max(64),
     aboutme: Joi
         .string()
         .max(1024),
@@ -40,7 +39,6 @@ const register= Joi.object({
         .string()
         .max(64),
     //profilePicture
-    //CoverPicture
     date: Joi
         .date()
         .default(Date)
