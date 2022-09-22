@@ -8,11 +8,11 @@ app.set('views', path.join(__dirname, 'web/views'));
 
 //Public folder
 app.use(express.json());
-app.use('./web/public',express.static('public'));
+app.use('/public', express.static(path.join(__dirname, '/web/public')));
 
 // Host Web Server
 const port=process.env.PORT;
-app.listen(port, (err)=>{
+module.exports=app.listen(port, (err)=>{
     if(err) {
         return console.error('\x1b[31m','Can not start the host:','\x1b[0m',err);
     }
