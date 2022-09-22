@@ -8,11 +8,11 @@ module.exports=router;
 // Connect info
 const { uri, dbname }=require('./connect.json');
 //mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+const client=new MongoClient(uri, {});
+client.db(dbname);
 
 // Connect to DB
-/*const client=new MongoClient(uri, {});
-client.db(dbname);
-const connect = async () => {
+/*const connect = async () => {
     try {
         await client.connect();
     } catch(e) {
