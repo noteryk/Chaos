@@ -37,7 +37,6 @@ connect();
 
 // Register
 router.post('/register', async (req, res) => {
-    //connect();
     //client.db().collection('').find({}).toArray();
 });
 
