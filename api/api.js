@@ -2,7 +2,9 @@ const router=require('express').Router();
 const { MongoClient }=require('mongodb');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
-const { verifytoken }=require('./middleware/verifytoken');
+const { verifytoken }=require('./middlewares/verifytoken');
+const { login, register }=require('./models/user');
+const { User, Friendship, Message, Group, Membership }=require('./classes/collections');
 module.exports=router;
 
 // Connect info
