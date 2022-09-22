@@ -19,6 +19,8 @@ const connect = async () => {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
     }
 };
+
+// Close connection to DB
 const close = async () => {
     try {
         await client.close();
@@ -26,6 +28,7 @@ const close = async () => {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
     }
 };
+// Show DB status
 const status = async () => {
     try {
         client.serverStatus();
