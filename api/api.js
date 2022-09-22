@@ -12,21 +12,19 @@ const client=new MongoClient(uri, {});
 client.db(dbname);
 
 // Connect to DB
-/*const connect = async () => {
+const connect = async () => {
     try {
         await client.connect();
     } catch(e) {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
-    } finally {
-        console.log('\x1b[32m','Server connected','\x1b[0m',`(on url ${uri})...`);
-        await client.close();
     }
-};*/
-const connect = async () => {
-
 };
 const close = async () => {
-
+    try {
+        await client.close();
+    } catch(e) {
+        console.error('\x1b[31m','Database error:','\x1b[0m',e);
+    }
 };
 const status = async () => {
     try {
@@ -39,6 +37,7 @@ connect();
 
 // Register
 router.post('/register', async (req, res) => {
+    //connect();
     //client.db().collection('').find({}).toArray();
 });
 
