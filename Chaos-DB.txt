@@ -9,7 +9,6 @@ User:
 -Aboutme
 -Status
 -ProfilePicture
--CoverPicture
 -CreateDate
 
 Friendship: (and invites)
