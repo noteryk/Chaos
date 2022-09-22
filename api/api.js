@@ -29,7 +29,11 @@ const close = async () => {
 
 };
 const status = async () => {
-
+    try {
+        client.serverStatus();
+    } catch(e) {
+        console.error('\x1b[31m','Database error:','\x1b[0m',e);
+    }
 };
 connect();
 
