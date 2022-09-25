@@ -1,14 +1,14 @@
 class User {
     //_id
     nick;
-    login;
+    tag;
     password;
     email;
     createDate;
     
-    constructor(nick=login, login=null, password=null, email=null) {
+    constructor(nick=login, password=null, email=null) {
         nick;
-        login;
+        tag;
         password;
         email;
         createDate=new Date();

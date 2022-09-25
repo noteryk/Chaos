@@ -2,8 +2,8 @@ Chaos-DB
 
 User:
 -userID
--Nick (może się powtarzać
--Login (nie może się powtarzać bo służy do logowania)
+-Nick (może się powtarzać)
+-Tag
 -Password
 -Email (nie może się powtarzać)
 -Aboutme
