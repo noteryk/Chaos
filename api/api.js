@@ -50,10 +50,13 @@ router.post('/login', async (req, res) => {
     const { error, value }=userClass.validate(login);
 
     // Is exist
+    // ! to już chyba normalnie
 
     // Unhash password
+    // ! to też normalnie
 
     // Create auth token
+    // ! to też normalnie (zapisywał będzie go user)
 });
 
 // Register
@@ -65,9 +68,12 @@ router.post('/register', async (req, res) => {
     const { error, value }=userClass.validate(register);
 
     // Is exists
+    // ! to już chyba normalnie
 
     // Hash password
+    // ! to też normalnie
 
     // Save to database
+    // ! zapisywanie za pomocą metody
     userClass.insert(client, "users");
 });
