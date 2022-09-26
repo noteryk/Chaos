@@ -7,18 +7,19 @@ const { Server }=require('socket.io');
 // Import
 const { verifytoken }=require('./middlewares/verifytoken');
 const { login, register }=require('./models/user');
+const { generateTag }=require('./models/tag');
 
 
-// Host
+// *Host*
 const io=new Server(require('../app'), {});
 
-// Connect info
+// *Connect info*
 const { uri, dbname }=require('./connect.json');
 const { requestTimeout } = require('../app');
 const client=new MongoClient(uri, {});
 client.db(dbname);
 
-// Connect to DB
+// *Connect to DB*
 const connect = async () => {
     try {
         await client.connect();
@@ -43,7 +44,7 @@ const close = async () => {
 
 
 
-// Login
+// ! *Login*
 router.post('/login', async (req, res) => {
     // Validate
     const { error, value }=login.validate({
@@ -67,12 +68,12 @@ router.post('/login', async (req, res) => {
     res.status(200).header('auth-token', token).send(token);
 });
 
-// Register
+// ! *Register*
 router.post('/register', async (req, res) => {
     // Validate
     const { error, value }=register.validate({
         nick: req.body.nick,
-        //need to generate tag
+        tag: generateTag(client, 'users', req.body.nick),
         password: req.body.password,
         email: req.body.email,
         aboutme: req.body.aboutme,
@@ -106,7 +107,7 @@ router.get('/profile', verifytoken, async (req, res) => {
 
 // Update your profile
 router.put('/profile', verifytoken, async (req, res) => {
-
+    //remember to use generateTag()
 });
 
 // Delete your profile
