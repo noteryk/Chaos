@@ -2,8 +2,9 @@ const Joi=require('joi');
 
 // Login valid
 const login= Joi.object({
-    login: Joi
+    email: Joi
         .string()
+        .email()
         .required(),
     password: Joi
         .string()
@@ -17,11 +18,10 @@ const register= Joi.object({
         .min(3)
         .max(64)
         .required(),
-    login: Joi
+    tag: Joi
         .string()
-        .min(3)
-        .max(64)
-        .required(),
+        .min(4)
+        .max(4),
     password: Joi
         .string()
         .min(6)
@@ -34,10 +34,12 @@ const register= Joi.object({
         .max(64),
     aboutme: Joi
         .string()
-        .max(1024),
+        .max(1024)
+        .default(''),
     status: Joi
         .string()
-        .max(64),
+        .max(64)
+        .default('offline'),
     //profilePicture
     date: Joi
         .date()

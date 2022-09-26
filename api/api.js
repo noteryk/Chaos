@@ -7,7 +7,6 @@ const { Server }=require('socket.io');
 // Import
 const { verifytoken }=require('./middlewares/verifytoken');
 const { login, register }=require('./models/user');
-const { User, Friendship, Message, Group, Membership }=require('./classes/collections');
 
 
 // Host
@@ -15,6 +14,7 @@ const io=new Server(require('../app'), {});
 
 // Connect info
 const { uri, dbname }=require('./connect.json');
+const { requestTimeout } = require('../app');
 const client=new MongoClient(uri, {});
 client.db(dbname);
 
@@ -36,6 +36,8 @@ const close = async () => {
         await client.close();
     } catch(e) {
         console.error('\x1b[31m','Database error:','\x1b[0m',e);
+    } finally {
+        console.log('\x1b[31m','Server disconnected','\x1b[0m');
     }
 };
 
@@ -43,37 +45,158 @@ const close = async () => {
 
 // Login
 router.post('/login', async (req, res) => {
-    // UserClass
-    const userClass=new User(req.body.name, req.body.password);
-
     // Validate
-    const { error, value }=userClass.validate(login);
+    const { error, value }=login.validate({
+        email: req.body.email,
+        password: req.body.password
+    });
+    if(error) return res.status(400).send(error.details[0].message);
 
     // Is exist
-    // ! to już chyba normalnie
+    const user=await client.db().collection('users').findOne({
+        email: value.email,
+    });
+    if(!user) return res.status(400).send('Email or password is wrong');
 
     // Unhash password
-    // ! to też normalnie
+    const validPassword=await bcrypt.compare(req.body.password, user.password);
+    if(!validPassword) return res.status(400).send('Email or password is wrong');
 
     // Create auth token
-    // ! to też normalnie (zapisywał będzie go user)
+    const token=jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
+    res.status(200).header('auth-token', token).send(token);
 });
 
 // Register
 router.post('/register', async (req, res) => {
-    // UserClass
-    const userClass=new User(req.body.nick, req.body.login, req.body.password, req.body.email);
-
     // Validate
-    const { error, value }=userClass.validate(register);
+    const { error, value }=register.validate({
+        nick: req.body.nick,
+        //need to generate tag
+        password: req.body.password,
+        email: req.body.email,
+        aboutme: req.body.aboutme,
+        status: req.body.status,
+        date: new Date()
+    });
+    if(error) return res.status(400).send(error.details[0].message);
 
     // Is exists
-    // ! to już chyba normalnie
+    const user=await client.db().collection('users').findOne({
+        email: value.email
+    });
+    if(user) return res.status(400).send('User with this email already exist');
 
     // Hash password
-    // ! to też normalnie
+    const hashedPassword=bcrypt.hash(value.password, 16);
+    value.password=hashedPassword;
 
     // Save to database
-    // ! zapisywanie za pomocą metody
-    userClass.insert(client, "users");
+    await client.db().collection('users').insertOne(value);
+    return res.status(200).send('User created');
+});
+
+
+// ! *Profile*
+// Get your profile by token
+router.get('/profile', verifytoken, async (req, res) => {
+
+});
+
+// Update your profile
+router.put('/profile', verifytoken, async (req, res) => {
+
+});
+
+// Delete your profile
+router.delete('/profile', verifytoken, async (req, res) => {
+
+});
+
+
+// ! *Groups*
+// Create group
+router.post('/groups', verifytoken, async (req, res) => {
+
+});
+
+// Get groupslist by (your)token
+router.get('/groups', verifytoken, async (req, res) => {
+    
+});
+
+// Update group (check by token if you are admin)
+router.put('/group', verifytoken, async (req, res) => {
+
+});
+
+// Delete group (check by token if you are admin)
+router.delete('/group', verifytoken, async (req, res) => {
+
+});
+
+
+// ! *Friends*
+// Add friend (wsing your token)
+router.post('/friends', verifytoken, async (req, res) => {
+
+});
+
+// Accept friend (using your token)
+router.put('/friends', verifytoken, async (req, res) => {
+
+});
+
+// Get friendslist by (your)token
+router.get('/friends', verifytoken, async (req, res) => {
+
+});
+
+// Delete friend (using your token)
+router.delete('/friends', verifytoken, async (req, res) => {
+
+});
+
+
+// ! *Memberships*
+// Add member (using your token)
+router.post('/memberships', verifytoken, async (req, res) => {
+
+});
+
+// Get memberships by (group)id
+router.get('/memberships', verifytoken, async (req, res) => {
+
+});
+
+// Update member (permission)
+router.put('/memberships', verifytoken, async (req, res) => {
+
+});
+
+// Delete member (check by token if you are admin)
+router.delete('membership', verifytoken, async (req, res) => {
+
+});
+
+
+// ! *Messages*
+// Send message (using your token)
+router.post('/messages', verifytoken, async (req, res) => {
+
+});
+
+// Get messages with someone by token and another user id
+router.get('/messages', verifytoken, async (req, res) => {
+    
+});
+
+// Update message (using your token)
+router.put('/messages', verifytoken, async (req, res) => {
+
+});
+
+// Delete message (using your token)
+router.delete('/messages', verifytoken, async (req, res) => {
+
 });
