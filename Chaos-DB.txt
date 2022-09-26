@@ -25,4 +25,5 @@ Group:
 Membership: (group)
 -groupID
 -memberID
+-permission (0-none, 1-mod, 2-admin)
 -muted (true or false)
