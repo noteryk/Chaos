@@ -5,9 +5,9 @@ const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
 const { Server }=require('socket.io');
 // Import
-const { verifytoken }=require('./middlewares/verifytoken');
+const verifytoken=require('./middlewares/verifytoken');
 const { login, register }=require('./models/user');
-const { generateTag }=require('./models/tag');
+const generateTag=require('./models/tag');
 
 
 // *Host*
@@ -15,9 +15,8 @@ const io=new Server(require('../app'), {});
 
 // *Connect info*
 const { uri, dbname }=require('./connect.json');
-const { requestTimeout } = require('../app');
+const app = require('../app');
 const client=new MongoClient(uri, {});
-client.db(dbname);
 
 // *Connect to DB*
 const connect = async () => {
@@ -53,8 +52,8 @@ router.post('/login', async (req, res) => {
     if(error) return res.status(400).send(error.details[0].message);
 
     // Is exist
-    const user=await client.db().collection('users').findOne({
-        email: value.email,
+    const user=await client.db(dbname).collection('users').findOne({
+        email: value.email
     });
     if(!user) return res.status(400).send('Email or password is wrong');
 
@@ -72,7 +71,7 @@ router.post('/register', async (req, res) => {
     // Validate
     const { error, value }=register.validate({
         nick: req.body.nick,
-        tag: generateTag(client, 'users', req.body.nick),
+        tag: generateTag(client, dbname, 'users', req.body.nick),
         password: req.body.password,
         email: req.body.email,
         aboutme: req.body.aboutme,
@@ -82,17 +81,17 @@ router.post('/register', async (req, res) => {
     if(error) return res.status(400).send(error.details[0].message);
 
     // Is exists
-    const user=await client.db().collection('users').findOne({
+    const user=await client.db(dbname).collection('users').findOne({
         email: value.email
     });
     if(user) return res.status(400).send('User with this email already exist');
 
     // Hash password
-    const hashedPassword=bcrypt.hash(value.password, 16);
+    const hashedPassword=await bcrypt.hash(value.password, 16);
     value.password=hashedPassword;
 
     // Save to database
-    await client.db().collection('users').insertOne(value);
+    await client.db(dbname).collection('users').insertOne(value);
     return res.status(200).send('User created');
 });
 
@@ -101,8 +100,7 @@ router.post('/register', async (req, res) => {
 // ! *Profile*
 // Get your profile by token
 router.get('/profile', verifytoken, async (req, res) => {
-    // ? tu będzie funkcja która uruchomi się po update bazy profilu io.emit("example_name",nowe_date);
-    // ? a w skrypcie strony będzie (const socket=io();) socket.on("example_name", funckja); (funkcja która dodaje nowe wiadomości(tymczasowo) bo po realodzie strony będzie się ładowało z bazy danych a to będzie znikać) w ten sposób można zrobić powiadomienia o nowych wiadomościach
+    
 });
 
 // Update your profile
