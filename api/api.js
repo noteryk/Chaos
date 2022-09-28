@@ -31,7 +31,7 @@ const connect = async () => {
 };
 connect();
 
-// Close connection to DB
+// *Close connection to DB*
 const close = async () => {
     try {
         await client.close();
@@ -41,7 +41,6 @@ const close = async () => {
         console.log('\x1b[31m','Server disconnected','\x1b[0m');
     }
 };
-
 
 
 // ! *Login*
@@ -98,11 +97,12 @@ router.post('/register', async (req, res) => {
 });
 
 
-
+/*
 // ! *Profile*
 // Get your profile by token
 router.get('/profile', verifytoken, async (req, res) => {
-
+    // ? tu będzie funkcja która uruchomi się po update bazy profilu io.emit("example_name",nowe_date);
+    // ? a w skrypcie strony będzie io.on("example_name", funckja); (funkcja która dodaje nowe wiadomości(tymczasowo) bo po realodzie strony będzie się ładowało z bazy danych a to będzie znikać) w ten sposób można zrobić powiadomienia o nowych wiadomościach
 });
 
 // Update your profile
@@ -202,3 +202,4 @@ router.put('/messages', verifytoken, async (req, res) => {
 router.delete('/messages', verifytoken, async (req, res) => {
 
 });
+*/
