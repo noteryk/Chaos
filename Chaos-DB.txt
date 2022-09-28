@@ -14,16 +14,23 @@ User:
 Friendship: (and invites)
 -friendshipID
 -senderID
+-senderNick
 -receiverID
+-receiverNick
 -status (accepted, pending or blocked)
 -muted (true or false)
 
 Message:
+-senderID
+-receiverID
+-groupID
+-content
 
 Group:
 
 Membership: (group)
 -groupID
+-nick
 -memberID
 -permission (0-none, 1-mod, 2-admin)
 -muted (true or false)
