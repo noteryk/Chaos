@@ -96,11 +96,16 @@ router.post('/register', async (req, res) => {
 });
 
 
+
 /*
 // ! *Profile*
 // Get your profile by token
 router.get('/profile', verifytoken, async (req, res) => {
-    
+    // ? const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
+    // ? return decoded._id;
+
+    // ? tu będzie funkcja która uruchomi się po update bazy profilu io.emit("example_name",nowe_date);
+    // ? a w skrypcie strony będzie (const socket=io();) socket.on("example_name", funckja); (funkcja która dodaje nowe wiadomości(tymczasowo) bo po realodzie strony będzie się ładowało z bazy danych a to będzie znikać) w ten sposób można zrobić powiadomienia o nowych wiadomościach
 });
 
 // Update your profile
