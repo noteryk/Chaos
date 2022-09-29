@@ -15,7 +15,6 @@ const io=new Server(require('../app'), {});
 
 // *Connect info*
 const { uri, dbname }=require('./connect.json');
-const app = require('../app');
 const client=new MongoClient(uri, {});
 
 // *Connect to DB*
