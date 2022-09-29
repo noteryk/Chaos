@@ -98,7 +98,7 @@ form .input-txt {
 }
 
 
-input[type="submit"] {
+button {
     width: 100%;
     cursor: pointer;
     border-radius: 20px;

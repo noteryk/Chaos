@@ -61,12 +61,20 @@ a:visited {
     margin-right: 20px;
 }
 
+.navbar-button-1:hover {
+    background-color: rgba(226, 232, 240, 0.98);
+}
+
 .navbar-button-2 {
-    border: 1px solid RGB(226 232 240);
+    border: 1px solid rgb(226, 232, 240);
     border-radius: 20px;
     padding: 12px;
     background-color: rgb(0, 119, 255);
     color: white;
+}
+
+.navbar-button-2:hover {
+    background-color: rgb(0, 102, 238);
 }
 
 .navbar-button-1 a {
@@ -116,7 +124,7 @@ a:visited {
 }
 
 .middle-button-1 {
-    border: 1px solid RGB(226 232 240);
+    border: 1px solid rgb(226 232 240);
     border-radius: 20px;
     padding: 12px;
     width: 155px;
@@ -145,13 +153,17 @@ a:visited {
 }
 
 .middle-button-2 {
-    border: 1px solid RGB(226 232 240);
+    border: 1px solid rgb(226 232 240);
     border-radius: 20px;
     padding: 12px;
     width: 223px;
     display: flex;
     align-items: center;
     font-size: 90%;
+}
+
+.middle-button-2:hover {
+    background-color: rgba(226, 232, 240, 0.98);
 }
 
 .middle-button-2 img {

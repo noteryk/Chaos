@@ -8,16 +8,14 @@
     <title>Chaos | Sign up</title>
 
     <link rel="stylesheet" href="../public/styles/sign_up.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../public/styles/button_loading.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="icon" href="../public/images/logo.png">
-    <script src="../public/scripts/sign_up.js"></script>
+    <script src="../public/scripts/sign_up.js" defer></script>
 </head>
 
 <body>
-
     <div class="main-div">
-
-
         <div class="box">
             <div class="main-div-text">
                 <svg width="50px" height="50px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
@@ -30,33 +28,26 @@
                 <form method="post">
                     <div class="input-txt">
                         <label> Nickname </label>
-                        <input type="text" required>
+                        <input type="text" id="nickname" required>
                     </div>
                     <br>
                     <div class="input-txt">
                         <label> E-mail </label>
-                        <input type="text" required>
+                        <input type="text" id="email" required>
                     </div>
                     <div class="input-txt">
                         <br>
                         <label> Password </label>
-                        <input type="password" required>
-
+                        <input type="password" id="password" autocomplete="current-password" required>
                     </div>
-                    <input type="submit" value="Create account">
+                    <button id="submit">Create account <span class="load loading"></span></button>
                     <div class="signup_link">
-                        Already a member? <a href="/signin">Sign in here!</a>
+                        Already a member? <a href="/sign_in">Sign in here!</a>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
-
-
-
-
-
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

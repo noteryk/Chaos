@@ -5,10 +5,10 @@ router.get('/', (req, res) => {
     res.render('landing', {});
 });
 
-router.get('/signin', (req, res) => {
+router.get('/sign_in', (req, res) => {
     res.render('sign_in', {});
 });
 
-router.get('/signup', (req, res) => {
+router.get('/sign_up', (req, res) => {
     res.render('sign_up', {});
 });
