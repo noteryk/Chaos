@@ -27,6 +27,7 @@ form.addEventListener('submit', async (e) => {
             submit.disabled=false;
             submit.style.cursor='pointer';
             //log for testing
+            //TODO: validation with error messages
             console.log(request.responseText);
         }
     };
