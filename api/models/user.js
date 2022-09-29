@@ -21,7 +21,8 @@ const register= Joi.object({
     tag: Joi
         .string()
         .min(4)
-        .max(4),
+        .max(4)
+        .required(),
     password: Joi
         .string()
         .min(6)
@@ -31,7 +32,8 @@ const register= Joi.object({
         .string()
         .email()
         .min(3)
-        .max(64),
+        .max(64)
+        .required(),
     aboutme: Joi
         .string()
         .max(1024)
