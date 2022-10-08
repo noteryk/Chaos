@@ -204,10 +204,4 @@ router.put('/messages', verifytoken, async (req, res) => {
 router.delete('/messages', verifytoken, async (req, res) => {
 
 });
-
-// ! *App files*
-// Get app files
-router.get('/appfiles/assets', async (req, res) => {
-
-});
 */
