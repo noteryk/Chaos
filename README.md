@@ -3,6 +3,7 @@
 With website, desktop app and mobile app(in progress).<br>
 "Best private communicator. Made for **you**."<br>
 ***ChaosAPI*** u can create your own website/app and still be anonymous while writing with your friends.<br><br>
+***ChaosAPP*** u can use our open source communicator application (use ChaosAPI) 
 *"Talk is cheap, show me the code"<br>
 ~Linus Torvalds*
 
