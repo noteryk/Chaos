@@ -15,6 +15,7 @@ const io=new Server(require('../app'), {});
 
 // *Connect info*
 const { uri, dbname }=require('./connect.json');
+const app = require('../app');
 const client=new MongoClient(uri, {});
 
 // *Connect to DB*
@@ -205,3 +206,8 @@ router.delete('/messages', verifytoken, async (req, res) => {
 
 });
 */
+
+// *Error handler for api*
+router.use(function fourOhFourHandler (req, res) {
+    res.status(404).send('404: Data not found');
+});
