@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     box-sizing: border-box;
@@ -33,7 +33,6 @@ a:link ,
 a:visited {
     color: black;
 }
-
 
 .menu div {
     text-transform: uppercase;
@@ -82,9 +81,6 @@ a:visited {
     text-decoration: none;
 }
 
-
-
-
 .upper-text {
     display: flex;
     align-items: center;
@@ -94,14 +90,12 @@ a:visited {
     font-weight: 100;
 }
 
-
 .middle-text {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 200%;
 }
-
 
 .lower-text{
     display: flex;
@@ -114,7 +108,6 @@ a:visited {
 .middle-text span {
     color: rgb(0, 119, 255);
 }
-
 
 .middle-buttons {
     display: flex;
@@ -177,14 +170,12 @@ a:visited {
     list-style: none;
 }
 
-
 .supported-browsers-text {
     display: flex;
     justify-content: center;
     padding-top: 250px;
     font-size: 80%;
 }
-
 
 .supported-browsers {
     display: flex;
@@ -203,7 +194,6 @@ a:visited {
 .chrome svg {
     margin: 10px
 }
-
 
 .edge {
     display: flex;
@@ -237,8 +227,6 @@ a:visited {
     margin: 10px
 }
 
-
-
 .features {
     background-color: rgb(0, 119, 255);
     padding-top: 8rem;
@@ -246,7 +234,6 @@ a:visited {
     align-items: center;
     justify-content: center;
 }
-
 
 .feature1 {
     align-items: center;
@@ -256,12 +243,10 @@ a:visited {
     padding-right: 15rem;
 }
 
-
 .feature1 h1 {
     padding-left: 1.5rem;
     font-weight: 600;
 }
-
 
 .feature1 p {
     padding-left: 1.5rem;
@@ -271,7 +256,6 @@ a:visited {
     padding-left: 0.6rem;
 }
 
-
 .feature2 {
     align-items: center;
     color: white;
@@ -280,18 +264,14 @@ a:visited {
     padding-right: 15rem;
 }
 
-
-
 .feature2 h1 {
     font-weight: 600;
 
 }
 
-
 .feature2-p p {
     padding-left: 0.5rem;
 }
-
 
 .feature3 {
     align-items: center;
@@ -300,14 +280,10 @@ a:visited {
     padding-bottom: 5rem;
 }
 
-
 .feature3 h1 {
     font-weight: 600;
     padding-left: 2rem;
 }
-
-
-
 
 .feature3-p {
     padding-left: 0.7rem;

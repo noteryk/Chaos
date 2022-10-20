@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     box-sizing: border-box;
@@ -14,14 +14,12 @@ body {
     background-color: rgb(0, 119, 255);
 }
 
-
 .main-div {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 10rem;
 }
-
 
 .box {
     display: flex;
@@ -34,7 +32,6 @@ body {
     border-radius: 5px;
 }
 
-
 .main-div-text h1 {
     transform: translate(50px, -40px)
 }
@@ -42,7 +39,6 @@ body {
 .main-div-text p {
     transform: translate(40px, -38px)
 }
-
 
 .box svg {
     height: 40px;
@@ -57,13 +53,11 @@ form .input-txt {
     outline: none;
 }
 
-
 .forgot-pwd{
     padding-top: 10px;
     text-align: right;
     color:rgb(33, 102, 182)
 }
-
 
 .forgot-pwd a {
     text-decoration: none;
@@ -79,7 +73,6 @@ form .input-txt {
     text-decoration: underline;
 }
 
-
 .signup_link a {
     text-decoration: none;
     color:rgb(33, 102, 182)
@@ -89,14 +82,12 @@ form .input-txt {
     text-decoration: underline;
 }
 
-
 .input-txt input {
     border: none;
     width: 100%;
     height: 40px;
     outline: none;
 }
-
 
 button {
     width: 100%;
@@ -110,14 +101,10 @@ button {
     font-size: 100%;
 }
 
-
-
 .signup_link {
     transform: translateY(50px);
 }
 
-
 .input-txt {
     padding-top: 10px;
 }
-
