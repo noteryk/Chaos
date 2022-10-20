@@ -1,3 +1,4 @@
+'use strict'
 const express=require('express');
 const app=express();
 const dotenv=require('dotenv');
@@ -28,3 +29,14 @@ app.use('/api', api);
 // Import Web
 const web=require('./web/web');
 app.use('/', web);
+
+// Error handlers
+// 404
+app.use(function fourOhFourHandler (req, res) {
+    res.status(400).render('404', {});
+});
+// 500
+app.use(function fiveHundredHandler (err, req, res, next) {
+    console.error(err)
+    res.status(500).send()
+});
