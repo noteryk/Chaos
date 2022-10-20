@@ -33,7 +33,7 @@ app.use('/', web);
 // Error handlers
 // 404
 app.use(function fourOhFourHandler (req, res) {
-    res.status(400).render('404', {});
+    res.status(404).render('404', {});
 });
 // 500
 app.use(function fiveHundredHandler (err, req, res, next) {
