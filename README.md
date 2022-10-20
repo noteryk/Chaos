@@ -8,7 +8,7 @@ With website, desktop app and mobile app(in progress).<br>
 ~Linus Torvalds*
 
 # ***ChaosAPP***:
-***ChaosAPP*** u can use our open source communicator application (use ChaosAPI)<br><br>
+***ChaosAPP*** u can use our open source communicator application (use ChaosAPI)<br>
 click <a href="">here</a> to see newes version of app
 
 # ***ChaosAPI*** Docs:
