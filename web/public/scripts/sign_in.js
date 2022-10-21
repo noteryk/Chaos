@@ -22,14 +22,12 @@ form.addEventListener('submit', async (e) => {
 
     request.onloadend=(e) => {
         if(request.status==200) {
-            window.location.href='';
+            localStorage.setItem('auth-token', request.responseText);
+            window.location.href='/chaos';
         } else {
             submit.innerHTML='SIGN IN';
             submit.disabled=false;
             submit.style.cursor='pointer';
-            //log for testing
-            //TODO: validation with error messages
-            console.log(request.responseText);
             error.innerHTML=request.responseText;
         }
     };

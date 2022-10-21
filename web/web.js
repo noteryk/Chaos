@@ -16,9 +16,6 @@ router.get('/sign_up', (req, res) => {
 });
 
 // Private routes
-router.get('/chaos', verifytoken, (req, res) => {
+router.get('/chaos', (req, res) => {
     res.render('dashboard', {});
 });
-
-/* Test */
-router.get('/test', (req, res) => {res.render('dashboard')});
