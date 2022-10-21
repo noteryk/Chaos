@@ -53,6 +53,7 @@ body {
 .password:focus {
     outline: none;
     border: 4px solid rgba(0, 119, 255, 0.3);
+    transition: .15s ease-in-out;
 }
 
 .form-inputs label {
@@ -115,8 +116,7 @@ input {
 .button a {
     margin-top: 15px;
     font-size: 0.9rem;
-    float: left;
-    padding-left: 95px;
+    transform: translateX(-50%);
     padding-bottom: 10px;
 }
 
