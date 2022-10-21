@@ -1,60 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaos | Sign in</title>
-    
     <link rel="stylesheet" href="../public/styles/sign_in.css">
-    <link rel="stylesheet" href="../public/styles/button_loading.css">
     <link rel="stylesheet" href="../public/styles/scrollbar.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="icon" href="../public/images/logo.png">
     <script src="../public/scripts/sign_in.js" defer></script>   
 </head>
-
 <body>
-    <div class="main-div">
-        <div class="box">
-            <div class="main-div-text">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 481.5 481.5"
-                    style="enable-background:new 0 0 481.5 481.5;" xml:space="preserve">
-                    <path d="M0,240.7c0,7.5,6,13.5,13.5,13.5h326.1l-69.9,69.9c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l93-93 c5.3-5.3,5.3-13.8,0-19.1l-93-93c-5.3-5.3-13.8-5.3-19.1,0c-5.3,5.3-5.3,13.8,0,19.1l69.9,69.9h-326C6,227.2,0,233.2,0,240.7z">
-                    </path>
-                    <path d="M382.4,0H99C44.4,0,0,44.4,0,99v58.2c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5V99c0-39.7,32.3-72,72-72h283.5 c39.7,0,72,32.3,72,72v283.5c0,39.7-32.3,72-72,72H99c-39.7,0-72-32.3-72-72V325c0-7.5-6-13.5-13.5-13.5S0,317.5,0,325v57.5 c0,54.6,44.4,99,99,99h283.5c54.6,0,99-44.4,99-99V99C481.4,44.4,437,0,382.4,0z">
-                    </path>
-                </svg>
-                <h1> Welcome! </h1>
-                <p>Sign in to your account</p>
-                <form method="post">
-                    <div class="input-txt">
-                        <label> E-mail </label>
-                        <input type="text" id="email" required>
-                    </div>
-                    <div class="input-txt">
-                        <br>
-                        <label> Password </label>
-                        <input type="password" id="password" autocomplete="current-password" required>
-                    </div>
-                    <div class="forgot-pwd">
-                        <a href="#">Forgot password?</a>
-                    </div>
-                    <button id="submit">Load <span class="load loading"></span></button>
-                    <div class="signup_link">
-                        Still not a member? <a href="/sign_up">Sign up here!</a>
-                    </div>
-                </form>
-            </div>
+    <div class="container">
+        <div class="error" id="error"></div>
+
+        <div class="upperText">
+            <h1> Sign in </h1>
+            <hr>
         </div>
+
+        <form class="form-inputs">
+            <label for="email"> E-mail </label><br>
+            <input type="text" class="email" id="email" required><br>
+            <label for="password"> Password </label><br>
+            <input type="password" class="password" id="password" required><br>
+            <a href="/forgot_password">Forgot Password?</a>
+
+            <div class="button">
+                <button id="submit">SIGN IN</button>
+                <a href="/sign_up">Still not a member?</a>
+            </div>
+        </form>
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
-
 </html>

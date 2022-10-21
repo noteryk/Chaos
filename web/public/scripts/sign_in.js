@@ -1,5 +1,6 @@
 const form=document.querySelector('form');
 const submit=document.querySelector('#submit');
+const error=document.querySelector('#error');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const Email=document.querySelector('#email').value;
@@ -15,7 +16,7 @@ form.addEventListener('submit', async (e) => {
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(data));
     
-    submit.classList.add('activeLoading');
+    submit.innerHTML='Loading...';
     submit.disabled=true;
     submit.style.cursor='not-allowed';
 
@@ -23,12 +24,13 @@ form.addEventListener('submit', async (e) => {
         if(request.status==200) {
             window.location.href='';
         } else {
-            submit.classList.remove('activeLoading');
+            submit.innerHTML='SIGN IN';
             submit.disabled=false;
             submit.style.cursor='pointer';
             //log for testing
             //TODO: validation with error messages
             console.log(request.responseText);
+            error.innerHTML=request.responseText;
         }
     };
 });
