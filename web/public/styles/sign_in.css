@@ -145,11 +145,7 @@ input {
     .error {
         position: absolute;
         transform: translateY(0px);
-        top: 0;
-        left: 0;
-    }
-
-    .error:hover {
-        visibility: hidden;
+        top: 30px;
+        right: 30px;
     }
 }   
