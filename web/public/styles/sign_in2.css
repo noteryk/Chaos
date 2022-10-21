@@ -98,10 +98,23 @@ input {
     transition: .30s ease-in-out;
 }
 
+
+
+
 .button a {
     margin-top: 15px;
     font-size: 0.9rem;
     float: left;
     padding-left: 95px;
     padding-bottom: 10px;
+}
+
+.error {
+    border: 2px solid #88def0;
+    background-color: #cff4fc;
+    color: #055160;
+    border-radius: 2px;
+    padding: 10px;
+    transform: translateY(-50px);
+    font-size: 0.8rem;
 }
