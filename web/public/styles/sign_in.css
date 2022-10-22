@@ -52,7 +52,7 @@ body {
 .email:focus,
 .password:focus {
     outline: none;
-    border: 4px solid rgba(0, 119, 255, 0.5);
+    border: 4px solid rgba(0, 119, 255, 0.3);
     transition: .15s ease-in-out;
 }
 
@@ -134,18 +134,3 @@ input {
 .error:empty {
     visibility: hidden;
 }
-
-@media screen and (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-
-    .error {
-        position: absolute;
-        transform: translateY(0px);
-        top: 30px;
-        right: 30px;
-    }
-}   

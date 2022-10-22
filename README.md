@@ -7,7 +7,7 @@ Our platform is available at almost ***every*** type of browser, mobile devices 
 
 # ***ChaosAPP***:
 ***ChaosAPP*** is a mobile based version of our website<br>
-Click<a href=""> here</a> to track our progress and download the newest version of our app.
+Click<a href="">here</a> to track our progress and download the newest version of our app.
 
 # ***ChaosAPI*** Docs:
 ***ChaosAPI*** u can create your own website/app and still be anonymous while writing with your friends.<br><br>
