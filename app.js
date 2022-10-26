@@ -5,7 +5,7 @@ const dotenv=require('dotenv');
 dotenv.config();
 const path=require('path');
 app.set('view engine','hbs'); //?(ejs)
-app.set('views', path.join(__dirname, 'web/views'));
+app.set('views', path.join(__dirname, 'web/private/views'));
 
 //Public folder
 app.use(express.json());
