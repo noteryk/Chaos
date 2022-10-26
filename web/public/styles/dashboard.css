@@ -17,7 +17,7 @@ body {
 .left-side {
     float: left;
     height: 100vh;
-    width: 25%;
+    width: 15%;
 }
 
 .left-navbar {
@@ -25,7 +25,7 @@ body {
     border: 1px solid black;
     background-color: blue;
     height: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 .left-list {
@@ -33,7 +33,9 @@ body {
     border: 1px solid black;
     background-color: chocolate;
     height: 100%;
-    width: 85%;
+    width: 80%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .left-side h1 {
@@ -45,7 +47,7 @@ body {
     border: 1px solid black;
     background-color: #252C33;
     height: 100vh;
-    width: 50%;
+    width: 70%;
     display: flex;
     float: left;
     flex-direction: column;
@@ -75,8 +77,8 @@ body {
     background: none;
     margin: 0;
     padding: 0 0 50px 0;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .chat li {
@@ -265,14 +267,83 @@ body {
 
 /* Right panel */
 .right-side {
-    width: 25%;
+    width: 15%;
     border: 1px solid black;
     background-color: red;
     height: 100vh;
     float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* Mobile screeen */
-@media screen and (max-width: 768px) {
-    /* here.. */
-}
+/*@media screen and (max-width: 750px) {
+    ::-webkit-scrollbar {
+    display: none;
+    }
+    .chat{
+        margin-bottom: 55px;
+    }
+    .msg p {
+        font-size: 11px;
+    }
+    .msg .user {
+        font-size: 13px;
+    }
+    .msg img {
+        width: 300px;
+    }
+    .chat .notification {
+        font-size: 12px;
+        margin: 7px 30%;
+        width: 40%;
+    }
+    .chat .day {
+        font-size: 11px;
+    }
+    .emojis {
+        width: 25%;
+    }
+    .send {
+        width: 25%;
+    }
+    textarea {
+        left: 0px;
+        right: 0px;
+        bottom: 50px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 20px;
+        width: 90%;
+        border-radius: 0px;
+        height: 28px;
+        background: #fafafa;
+        box-shadow: none;
+        transition: all .4s cubic-bezier(0.2, -0.2, 0.2, 1.2);
+    }
+    textarea:focus {
+        height: 30vh;
+        margin-top: 30vh;
+        box-shadow: 0px -20px 20px rgba(0,0,0,0.1);
+    }
+    form:focus ~ .typezone {
+        bottom: 50vh;
+    }
+}*/
+/*@media screen and (max-width: 550px) {
+    .msg p {
+        max-width: 250px;
+    }
+    .msg img {
+        width: 200px;
+    }
+    .chat .notification {
+        font-size: 12px;
+        margin: 7px 0px;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat .notification time {
+        right: 10px;
+    }
+}*/
