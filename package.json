@@ -5,22 +5,28 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "nodemon app.js"
+    "test": "nodemon app.js",
+    "sass": "node-sass -w ./web/public/scss -o ./web/public/styles --output-style compressed"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Michallesss/Chaos.git"
   },
   "keywords": [
-    "electron",
-    "react",
     "nodejs",
     "javascript",
     "css",
     "html",
+    "sass",
+    "api",
     "bootstrap",
-    "typescript",
-    "mongodb"
+    "express",
+    "mongodb",
+    "socket.io",
+    "joi",
+    "jsonwebtoken",
+    "hbs",
+    "bcrypt"
   ],
   "author": "Mikael",
   "license": "ISC",
@@ -36,6 +42,7 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.9.1",
+    "node-sass": "^7.0.3",
     "nodemon": "^2.0.20",
     "sass": "^1.55.0",
     "socket.io": "^4.5.2"
