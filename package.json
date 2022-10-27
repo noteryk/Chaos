@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "nodemon app.js",
-    "sass": "node-sass -w ./web/private/scss -o ./web/public/styles --output-style compressed",
-    "typescript": "tsc -w --rootDir ./web/private/typescript --outDir ./web/public/scripts --module commonjs --target es5 --sourceMap false --removeComments true" 
+    "scss": "node-sass -w ./web/private/scss -o ./web/public/styles --output-style compressed",
+    "typescript": "tsc -w --rootDir ./web/private/typescript --outDir ./web/public/scripts --module commonjs --target es5 --sourceMap false --removeComments true compressed" 
   },
   "repository": {
     "type": "git",
