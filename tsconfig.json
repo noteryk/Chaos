@@ -2,7 +2,7 @@
     "compilerOptions": {
         "rootDir": "./web/private/typescript",
         "outDir": "./web/public/scripts",
-        "target": "es5",
+        "target": "ES2022",
         "module": "es2015",
         "removeComments": true,
         "noImplicitAny": true,
