@@ -12,6 +12,7 @@ Click<a href="">here</a> to track our progress and download the newest version o
 # ***ChaosAPI*** Docs:
 ***ChaosAPI*** u can create your own website/app and still be anonymous while writing with your friends.<br><br>
 Rest API
+
 ### Register:
 `http://Chaos.pl/api/register`<br> 
 **method:**<br> Post<br><br>
@@ -22,6 +23,7 @@ Header takes:<br>
 Return:<br>
 'User created'<br>
 
+#
 ### Login:
 `http://Chaos.pl/api/login`<br> 
 **method:**<br> Post<br><br>
