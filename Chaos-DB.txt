@@ -5,6 +5,7 @@ User:
 -Nick (może się powtarzać)
 -Tag
 -Password
+-Roles(array) (mod, admin, head_admin, owner)
 -Email (nie może się powtarzać)
 -Aboutme
 -Status
@@ -32,5 +33,5 @@ Membership: (group)
 -groupID
 -nick
 -memberID
--permission (0-none, 1-mod, 2-admin)
+-roles(array) ( mod, admin)
 -muted (true or false)
