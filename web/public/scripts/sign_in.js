@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
             email: Email.value,
         };
         let request = new XMLHttpRequest();
-        request.open('POST', url, false);
+        request.open('POST', url, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify(data));
         submit.innerHTML = 'Loading...';

@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
             email: Email.value,
         };
         let request: XMLHttpRequest=new XMLHttpRequest();
-        request.open('POST', url, false);
+        request.open('POST', url, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify(data));
     
@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
                     email: Email.value,
                 };
                 let login_request: XMLHttpRequest=new XMLHttpRequest();
-                login_request.open('POST', url, false);
+                login_request.open('POST', url, true);
                 login_request.setRequestHeader('Content-Type', 'application/json');
                 login_request.send(JSON.stringify(data));
 
