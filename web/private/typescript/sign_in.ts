@@ -20,6 +20,8 @@ window.addEventListener('load', () => {
         request.send(JSON.stringify(data));
         
         submit.innerHTML='Loading...';
+        Email.disabled=true;
+        Password.disabled=true;
         submit.disabled=true;
         submit.style.cursor='not-allowed';
     
@@ -30,6 +32,8 @@ window.addEventListener('load', () => {
                 window.location.href='/chaos';
             } else {
                 submit.innerHTML='SIGN IN';
+                Email.disabled=false;
+                Password.disabled=false;
                 submit.disabled=false;
                 submit.style.cursor='pointer';
                 error.innerHTML=request.responseText;

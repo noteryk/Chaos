@@ -18,6 +18,9 @@ window.addEventListener('load', () => {
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify(data));
         submit.innerHTML = 'Loading...';
+        Nick.disabled = true;
+        Email.disabled = true;
+        Password.disabled = true;
         submit.disabled = true;
         submit.style.cursor = 'not-allowed';
         request.onloadend = (event) => {
@@ -40,6 +43,9 @@ window.addEventListener('load', () => {
                     }
                     else {
                         submit.innerHTML = 'SIGN UP';
+                        Nick.disabled = false;
+                        Email.disabled = false;
+                        Password.disabled = false;
                         submit.disabled = false;
                         submit.style.cursor = 'pointer';
                         error.innerHTML = login_request.responseText;
@@ -48,6 +54,9 @@ window.addEventListener('load', () => {
             }
             else {
                 submit.innerHTML = 'SIGN UP';
+                Nick.disabled = false;
+                Email.disabled = false;
+                Password.disabled = false;
                 submit.disabled = false;
                 submit.style.cursor = 'pointer';
                 error.innerHTML = request.responseText;
