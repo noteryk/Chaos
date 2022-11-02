@@ -24,6 +24,9 @@ html {
 .menu a {
     list-style: none;
     text-decoration: none;
+    &:hover {
+        font-weight: bold;
+    }
 }
 
 a {
