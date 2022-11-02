@@ -13,9 +13,7 @@ User:
 
 Friendship: (and invites)
 -senderID
--senderNick
 -receiverID
--receiverNick
 -status (accepted, pending or blocked)
 -muted (true or false)
 
