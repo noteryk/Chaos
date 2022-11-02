@@ -73,9 +73,11 @@ router.post('/register', async (req, res) => {
         nick: req.body.nick,
         tag: generateTag(client, dbname, 'users', req.body.nick),
         password: req.body.password,
+        roles: req.body.roles,
         email: req.body.email,
-        aboutme: req.body.aboutme,
+        aboutMe: req.body.aboutme,
         status: req.body.status,
+        profilePicture: req.body.profilePicture,
         date: new Date()
     });
     if(error) return res.status(400).send(error.details[0].message);

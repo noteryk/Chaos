@@ -28,13 +28,20 @@ const register= Joi.object({
         .min(6)
         .max(64)
         .required(),
+    roles: Joi
+        .array()
+        .items(Joi
+            .string()
+            .allow('user','mod', 'admin','head-admin','owner')
+        )
+        .default(null),
     email: Joi
         .string()
         .email()
         .min(3)
         .max(64)
         .required(),
-    aboutme: Joi
+    aboutMe: Joi
         .string()
         .max(1024)
         .default(''),
@@ -42,7 +49,9 @@ const register= Joi.object({
         .string()
         .max(64)
         .default('offline'),
-    //profilePicture
+    profilePicture: Joi
+        .allow(null)
+        .default(null),
     date: Joi
         .date()
         .default(Date)
