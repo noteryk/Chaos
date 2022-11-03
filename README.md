@@ -6,8 +6,29 @@ Our platform is available at almost ***every*** type of browser, mobile devices 
 ~ Linus Torvalds*
 
 
+# Features
+We can currently provide:
 
-Made by <a href="https://github.com/noteryk"> noteryk </a> & <a href="https://github.com/Michallesss"> Michallesss </a>
+<ul>
+
+<li> Support on every type of browser </li>
+<li> Secured database </li>
+<li> Communicate with others easily </li>
+<li> Create own groups and chats </li>
+<li> Fast and helpful support </li>
+<li> 100% Free service </li>
+
+<ul>
+
+
+# Feedback
+We would love to hear your feedback after using our site. You can do it directly via <a href="https://github.com/noteryk/Chaos/issues"> posting an issue </a>.
+Feedbacks are always much appreciated.
+
+If there's anything you would like to suggest or add please dm us using Discord.
+
+# Contributors
+This project was made by these people -> <a href="https://github.com/noteryk"> noteryk </a> & <a href="https://github.com/Michallesss"> Michallesss </a>
 
 # ***ChaosAPP***:
 ***ChaosAPP*** is a mobile based version of our website<br>
