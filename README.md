@@ -1,5 +1,5 @@
 # Check before reading!
-Remember that we are still discovering new technologies, learning while building this website, that's why it's still ***Work in Progress*** and not everything might be done perfectly but we had a lot of fun doing this:)
+Remember that we are still discovering new technologies, learning while building this website, that's why it's still ***Work in Progress*** and not everything might be done perfectly but we're having a lot of fun doing this:)
 
 
 # Chaos
