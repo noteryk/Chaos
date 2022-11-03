@@ -26,7 +26,7 @@ We can currently provide:
 
 
 # Feedback
-We would love to hear your feedback after using our site. You can do it directly via <a href="https://github.com/noteryk/Chaos/issues"> posting an issue </a>.
+We would love to hear your feedback after using our site. If you found a bug please report it using github <a href="https://github.com/noteryk/Chaos/issues"> posting an issue </a>.
 Feedbacks are always much appreciated.
 
 If there's anything you would like to suggest or add please dm us using Discord.
