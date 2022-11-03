@@ -13,8 +13,8 @@ We can currently provide:
 
 <li> Support on every type of browser </li>
 <li> Secured database </li>
-<li> Communicate with others easily </li>
-<li> Create own groups and chats </li>
+<li> Communicator which allows to communicate with others easily </li>
+<li> Groups and chats </li>
 <li> Fast and helpful support </li>
 <li> 100% Free service </li>
 
