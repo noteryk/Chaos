@@ -18,7 +18,7 @@ We can currently provide:
 <li> Fast and helpful support </li>
 <li> 100% Free service </li>
 
-<ul>
+</ul>
 
 
 # Feedback
