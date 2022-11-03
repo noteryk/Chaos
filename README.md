@@ -1,3 +1,7 @@
+# Check before reading!
+Remember that we are still discovering new technologies, learning while building this website, that's why it's still ***Work in Progress*** and not everything might be done perfectly but we had a lot of fun doing this:)
+
+
 # Chaos
 "Chaos" - is ***free*** app based on communication (messaging) which is available across a range of desktop and mobile platforms.<br>
 Our platform is available at almost ***every*** type of browser, mobile devices and soon even more.<br>
