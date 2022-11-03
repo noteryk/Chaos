@@ -5,6 +5,10 @@ Our platform is available at almost ***every*** type of browser, mobile devices 
 *"Talk is cheap, show me the code"<br>
 ~ Linus Torvalds*
 
+
+
+Made by <a href="https://github.com/noteryk"> noteryk </a> & <a href="https://github.com/Michallesss"> Michallesss </a>
+
 # ***ChaosAPP***:
 ***ChaosAPP*** is a mobile based version of our website<br>
 Click<a href=""> here</a> to track our progress and download the newest version of our app.
